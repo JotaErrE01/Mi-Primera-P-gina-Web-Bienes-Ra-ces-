@@ -1,0 +1,400 @@
+/*para dar estilod utilizando un id se usa # y el nombre del id
+#site-header{
+    background-color: khaki;
+}
+/*cuando es una clase utiliza un punto
+.encabezado{
+    color: darkblue;
+}*/
+html{
+    /*basicamente un rem equivale a 16px pero con esto 1 rem vale 10px*/
+    /*es recomendable utilizar los rem a los pixeles u otras medidas*/
+    font-size: 62.5%;/*reset para rems 62.5%=10px de 16px*/
+}
+body{/*para cambiar la fuente de la letra*/
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: 'Lato', sans-serif;
+}
+
+/*GLOBALES*/
+img{/*tamaño maximo de las imagenes, como recomendacion para todos los proyectos*/
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 115rem;
+    margin-left: 8rem;
+    margin-right: auto;
+}
+.contenedor2{
+    max-width: 110rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*flex: 1;*/
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+/*Utilidades*/
+.section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300{
+   font-weight: 300;
+   text-align: center;
+}
+.d-block{
+    display: block!important;/*trata el objeto como bloque y no como link, y toma el esapcio del selector*/
+}
+.contenido-centrado{
+    width: 75rem;   
+}
+/*Botones*/
+.button{ 
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    border: none;
+}
+.button:hover{
+    cursor: pointer;/*para cambiar la forma del cursor cuando pase por encima del boton*/
+}
+.boton-amarillo{
+    background-color: peru;
+    /*text-align: center;*/
+}
+.boton-verde{
+    background-color: rgba(123, 255, 0, 0.924);
+    /*text-align: right;*/
+    /*max-width: 8rem;*/
+}
+/*HEADER*/
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio {
+    background-image: url(../img/header.jpg);/*imagen de fondo*/
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;/*fucion para cubrir la altura de la pantalla*/
+    min-height: 60rem;/*minimo va a medir*/
+}
+.barra{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    /*align-items: center;*/
+}
+
+.textoInicio{
+    height: 100%;/*para que llene la altura del padre*/
+    justify-content: space-between;
+    display: flex;/*aplicamos flex box*/
+    flex-direction: column;/*para que flex solo afecte verticalmente*/
+}
+.textoInicio h1{
+    /*font-size: 3.2rem;*/
+    color: whitesmoke;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;/*interlineado*/
+}
+
+/*Navegacion*/
+.navegacion a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    /*para cambiar la fuente a la navegacion*/  
+    /*font-family: 'Times New Roman', Times, serif;*/
+}
+.navegacion a:hover{/*para dar color cuando se pase el mouse por encima*/
+    color: forestgreen;
+}
+.navegacion a:last-of-type{
+    margin: 0;/*para quitarle el margen al ultimo elemento*/
+}
+.iconos-nosotros{
+    display:flex;/*flexbox*/
+    justify-content: space-between;
+    /*flex-direction: column;*/
+    /*text-align: center;*/
+}
+.icono{
+    flex-basis: calc(32% - 1rem);/*ancho de los elementos. NOTA SEPARA EL SIGNO - COMO ESTA ESCRITO SINO NO FUNCIONARA*/
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+}
+.icono h3{
+    text-transform: uppercase;
+}
+.contenedor-anuncios{
+    display: flex;/*flexbox*/
+    justify-content: space-between;
+    flex-wrap: wrap;/*no se como explicar pero es para que flex tome solo el espacio del 
+    contenedor y si se sobrepasa ponga un elemento despues del otro, esta propiedad va en el 
+    padre o contenedor principal*/
+}
+.anuncio{
+    margin-bottom: 2rem;
+    flex-shrink: 0;/*para que no se encojan los elementos*/
+    flex-basis: calc(32% - 1rem);
+    /*border-style: solid;
+    border-color: darkgrey;
+    border-width: 0.1rem;*/
+    /*tambien puedes definir los bordes solo usando solo border*/
+    border: 1px solid darkgray;
+    background-color: #F5F5F5;
+}
+.contenido-anuncio{
+    /*text-align: center;*/
+    /*padding-left: 2rem;
+    padding-right: 2rem;*/
+    padding: 0rem 2rem 3rem 2rem;
+}
+.contenido-anuncio h3{
+    /*margin-top: 1rem;*/
+    font-size: 2.7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;        
+}
+.descripcion{
+    font-size: 1.8rem;
+}
+.prize-color{
+    font-size: 1.7rem;
+    /*margin-top: 0;
+    margin-bottom: 0;*/
+    /*text-align: left;*/
+    color: green;
+    /*font-weight: 700;*/
+}
+.alinear{
+    display: flex;
+    justify-content: flex-end;  
+}
+.caracteristicas_iconos{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1;
+}
+.caracteristicas_iconos li{
+    display: flex;
+}
+.caracteristicas_iconos li p{
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+/*
+.caracteristicas_iconos li{
+    display: flex; //*afectas dentro de los li
+}*/
+/*
+body::-webkit-scrollbar-track{
+    background-color: black;
+}
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: darkviolet;
+    border-radius: 5px;
+    
+}*/
+.imagen-contacto{
+    background-image: url("../img/encuentra.jpg");
+    background-position: center center;/*centramos la imagen*/
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto{
+    flex: 1;/*es el factor de crecimiento, detecta el tamaño disponible para asignar un tamaño dependiendo de los elementos*/
+    /*margin-left: auto;*/
+    color: white;
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+/**Sección inferior**/
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+.seccion-inferior .blog{/*el blog toma el 60% de la pantalla*/
+    flex-basis: 53%;
+    /*max-width: 10%;*/
+}
+.seccion-inferior .testimoniales{/*testimoniales toma el 40% - 2rem*/
+    flex-basis: calc(40% - 1.5rem);
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+}
+.imagen{
+    flex-basis: 38%;
+}
+.texto-entrada{
+    flex-basis: calc(65% - 4rem);
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.2;/*interlineado*/
+}
+.espaciado{
+    padding-top: 2rem;
+    /*margin-top: 2rem;*/
+}
+.texto-entrada p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.texto-entrada a{
+    color: black;
+    text-decoration: none;
+}
+.texto-entrada h4::after{/*para crear un pseudo elemento depues del texto, los pseudoelementoos no se pueden seleccionar*/
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: greenyellow;
+    margin-top: 1rem;
+}
+.texto-entrada span{
+    color: goldenrod;
+}
+.testimonial{
+    background-color: rgb(115, 187, 33);
+    font-size: 2.1rem;
+    color:white;
+    padding: 1rem;
+    line-height: 4rem;
+    border-radius: 2rem;/*50% para hacer un circulo*/ 
+}
+.testimonial p{
+    text-align: right;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;/*indicamos coordenadas*/
+    left: -2rem;
+    top: -1rem;
+}
+.testimonial blockquote{
+    position: relative;/*indicamos coordenadas va con position absolute*/
+    padding-left: 5rem;
+}
+/*NOTA CUANDO JUEGAS CON POSICIONES EL ELEMENTO PADRE DEBE TENER UNA POSICION RELATIVA
+Y EL ELEMENTO HIJO TENDRA LA POSICION ABSOLUTA EN EL CASO DE ARRIBA EL ELEMENTO HIJO ES
+::before Y EL ELEMENTO PADRE ES BLOCQUOTE*/
+/**Footer**/
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+.copyright{
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;/*padding arriba y abajo 2.5 e izq y derecha 0*/
+    margin-top: 2rem;
+}
+/**Internas**/
+.contenido-nosotros{
+    display: grid;
+    /*grid-template-columns: 50% 50%; es lo mismo de abajo*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;/*ojo con esta funcion que ya esta obsoleta v,:*/
+}
+.texto-nosotros{
+    /*margin-left: 2rem;*/
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+.texto-nosotros blockquote{
+    padding: 1rem 0;
+    font-weight: 800;
+    margin: 0;
+}
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/*align-items-->alinea verticalmente, mientras que justify content--> horizontalmente*/
+}
+.contenido-centrado p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+/**contacto**/
+.contacto p{
+    margin-bottom: 0%;
+}
+label{
+    display: block;/*para que cada elemento tome el espacio disponible en ancho y alto
+    al haber mas de un elemento se posicionan debajo*/
+    font-size: 1.7rem;
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+legend{
+    font-size: 2.4rem;
+    color: #333333;
+}
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 95%;
+    background-color: rgb(214, 213, 213);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 430;
+}
+select{
+    width: 97.5%;
+}
+textarea{
+    height:20rem;
+}
+input[type="radio"]{
+    width: auto;
+}
+.forma-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60%;
+}

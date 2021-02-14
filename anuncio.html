@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--es recomendable que tu hoja de estilos(tu link) la coloques como la última-->
+    <link rel="stylesheet" href="css/styles.css">    
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="contenedor textoInicio">
+            <div class="barra">
+                <!--la etiqueta alt muestra el texto alternativo que se presenta en caso de que la imagen no cargue-->
+                <!--la etiqueta a que se agrega aqui es para cuando se de click en el logotipo de la pagina te lleve a la pagina
+                principal. href="/" es para llevar al usuario a la pagina principal-->
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                </a>
+                <!--Para crear enlace usamos la etiqueta a-->
+                <!--para crear un enlace a una pagina web externa usamos el protocolo completo de esa página-->
+                <!--al usar el atributo target nos abre una nueva pestaña a la pagina a ir, es recomendable usarlo 
+                cuando el usuario tenga que abrir una pagina que no sea tuya-->
+                <!--<a target="_blank" href="https://facebook.com">Nosotros</a>-->
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="fw-300">Casa en venta frente al bosque</h1>
+    <img src="img/destacada.jpg" alt="imagen-anuncio">
+
+    <main class="contenedor2 section contenido-centrado">
+        <div class="resumen-propiedad">
+            <p class="prize-color">$3,000,000</p>
+            <ul class="caracteristicas_iconos">
+                <li>
+                    <img src="img/icono_wc.svg" alt="icon_wc">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img src="img/icono_estacionamiento.svg" alt="icono_estacionamiento">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img src="img/icono_dormitorio.svg" alt="icono_estacionamiento">
+                    <p>4</p>
+                </li>
+            </ul>
+        </div><!--resumen de propiedad-->
+        <p>
+            Suspendisse augue elit, semper id ultricies sit amet, tristique at mi. 
+            Curabitur eros diam, pharetra eget finibus convallis, condimentum quis justo. 
+            Donec tempor justo ac tortor facilisis, ut dapibus purus tempor. Nam vitae 
+            neque vulputate, pulvinar urna at, sodales diam. Praesent pharetra erat mi, 
+            quis laoreet odio sagittis sed. Vestibulum facilisis lorem non dolor accumsan, 
+            ut vehicula quam faucibus. Sed consectetur efficitur urna, ut sodales libero 
+            suscipit in. Etiam id mauris eu mi finibus hendrerit eget non ex. Aenean vel 
+            volutpat est, id venenatis ex. Praesent ac molestie eros.
+        </p>
+        <p>
+            Nullam egestas tempus nulla, eget egestas justo aliquet eu. Vestibulum ac sem 
+            ut sapien maximus fermentum ac sit amet ipsum. Duis libero tortor, ornare eget 
+            mattis sed, dapibus nec libero. Aliquam a lorem vel leo varius porttitor volutpat 
+            at erat. Quisque vitae turpis a turpis fermentum auctor eu a libero. 
+            Quisque turpis mi, aliquam eget viverra ut, facilisis non massa. 
+            Vestibulum facilisis facilisis orci, non eleifend ex posuere in.
+    </main>
+    
+    <footer class="site-footer section">
+        <div class="contenedor2 contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>           
+            <!--&copy es una entidad en html, hay muchas entidades que puedes buscar en la red-->
+            <p class="copyright">Todos los Derechos Reservados 2021 &copy;</p>
+        </div>
+    </footer>
+
+</body>
+</html>
