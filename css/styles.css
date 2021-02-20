@@ -6,61 +6,87 @@
 .encabezado{
     color: darkblue;
 }*/
-html{
+
+html {
     /*basicamente un rem equivale a 16px pero con esto 1 rem vale 10px*/
     /*es recomendable utilizar los rem a los pixeles u otras medidas*/
-    font-size: 62.5%;/*reset para rems 62.5%=10px de 16px*/
+    font-size: 62.5%;
+    /*reset para rems 62.5%=10px de 16px*/
 }
-body{/*para cambiar la fuente de la letra*/
+
+body {
+    /*para cambiar la fuente de la letra*/
     /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     font-family: 'Lato', sans-serif;
 }
 
+
 /*GLOBALES*/
-img{/*tamaño maximo de las imagenes, como recomendacion para todos los proyectos*/
+
+img {
+    /*tamaño maximo de las imagenes, como recomendacion para todos los proyectos*/
     max-width: 100%;
 }
-.contenedor{
-    max-width: 115rem;
-    margin-left: 8rem;
-    margin-right: auto;
-}
-.contenedor2{
+
+.contenedor {
+    width: 95%;
     max-width: 110rem;
     margin-left: auto;
     margin-right: auto;
-    /*flex: 1;*/
 }
-h1{
+
+
+/*
+.contenedor2 {
+    max-width: 115rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*flex: 1;
+}*/
+
+h1 {
     font-size: 3.8rem;
 }
-h2{
+
+h2 {
     font-size: 3.4rem;
 }
-h3{
+
+h3 {
     font-size: 3rem;
 }
-h4{
+
+h4 {
     font-size: 2.6rem;
 }
+
+
 /*Utilidades*/
-.section{
+
+.section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.fw-300{
-   font-weight: 300;
-   text-align: center;
+
+.fw-300 {
+    font-weight: 300;
+    text-align: center;
 }
-.d-block{
-    display: block!important;/*trata el objeto como bloque y no como link, y toma el esapcio del selector*/
+
+.d-block {
+    display: block!important;
+    /*trata el objeto como bloque y no como link, y toma el esapcio del selector*/
 }
-.contenido-centrado{
-    width: 75rem;   
+
+.contenido-centrado {
+    width: 75rem;
 }
+
+
 /*Botones*/
-.button{ 
-    display: inline-block;
+
+.button {
+    /*display: inline-block;*/
     color: white;
     font-weight: 700;
     text-decoration: none;
@@ -69,93 +95,166 @@ h4{
     text-align: center;
     margin-top: 2rem;
     border: none;
+    flex: 0 0 100%;
+    display: block;
 }
-.button:hover{
-    cursor: pointer;/*para cambiar la forma del cursor cuando pase por encima del boton*/
+
+@media (min-width: 800px) {
+    .button {
+        flex: 0 0 auto;
+        display: inline-block;
+    }
 }
-.boton-amarillo{
+
+.button:hover {
+    cursor: pointer;
+    /*para cambiar la forma del cursor cuando pase por encima del boton*/
+}
+
+.boton-amarillo {
     background-color: peru;
     /*text-align: center;*/
 }
-.boton-verde{
+
+.boton-verde {
     background-color: rgba(123, 255, 0, 0.924);
     /*text-align: right;*/
     /*max-width: 8rem;*/
 }
+
+
 /*HEADER*/
-.site-header{
+
+.site-header {
+    background-image: url(../img/header.jpg);
+    /*imagen de fondo*/
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    /*fucion para cubrir la altura de la pantalla*/
+    /*min-height: 60rem;*/
+    /*minimo va a medir*/
     background-color: #333333;
     padding: 1rem 0 3rem 0;
 }
-.site-header.inicio {
-    background-image: url(../img/header.jpg);/*imagen de fondo*/
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;/*fucion para cubrir la altura de la pantalla*/
-    min-height: 60rem;/*minimo va a medir*/
-}
-.barra{
-    display: flex;
+
+.textoInicio {
+    height: 100%;
+    /*para que llene la altura del padre*/
     justify-content: space-between;
-    padding-top: 3rem;
-    /*align-items: center;*/
+    display: flex;
+    /*aplicamos flex box*/
+    flex-direction: column;
+    /*para que flex solo afecte verticalmente*/
 }
 
-.textoInicio{
-    height: 100%;/*para que llene la altura del padre*/
-    justify-content: space-between;
-    display: flex;/*aplicamos flex box*/
-    flex-direction: column;/*para que flex solo afecte verticalmente*/
-}
-.textoInicio h1{
+.textoInicio h1 {
     /*font-size: 3.2rem;*/
     color: whitesmoke;
     padding-bottom: 2rem;
-    max-width: 60rem;
-    line-height: 2;/*interlineado*/
-}
-
-/*Navegacion*/
-.navegacion a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-right: 2rem;
-    /*para cambiar la fuente a la navegacion*/  
-    /*font-family: 'Times New Roman', Times, serif;*/
-}
-.navegacion a:hover{/*para dar color cuando se pase el mouse por encima*/
-    color: forestgreen;
-}
-.navegacion a:last-of-type{
-    margin: 0;/*para quitarle el margen al ultimo elemento*/
-}
-.iconos-nosotros{
-    display:flex;/*flexbox*/
-    justify-content: space-between;
-    /*flex-direction: column;*/
-    /*text-align: center;*/
-}
-.icono{
-    flex-basis: calc(32% - 1rem);/*ancho de los elementos. NOTA SEPARA EL SIGNO - COMO ESTA ESCRITO SINO NO FUNCIONARA*/
-    font-size: 1.5rem;
+    max-width: 95%;
     line-height: 2;
+    /*interlineado*/
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
-.icono h3{
+
+@media (min-width: 800px) {
+    .textoInicio h1 {
+        margin: 0;
+        text-align: left;
+        max-width: 60%;
+    }
+}
+
+.barra {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+    }
+}
+
+
+/*Navegacion*/
+
+.navegacion a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding-top: 2rem;
+    /*para cambiar la fuente a la navegacion*/
+    /*font-family: 'Times New Roman', Times, serif;*/
+}
+
+@media (min-width: 800px) {
+    .navegacion a {
+        display: unset;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+        /*para quitarle el margen al ultimo elemento*/
+    }
+}
+
+.navegacion a:hover {
+    /*para dar color cuando se pase el mouse por encima*/
+    color: forestgreen;
+}
+
+@media (min-width: 800px) {
+    .iconos-nosotros {
+        display: flex;
+        /*flexbox*/
+        justify-content: space-between;
+        /*flex-direction: column;*/
+        /*text-align: center;*/
+    }
+}
+
+.icono {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 800px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+        /*ancho de los elementos. NOTA SEPARA EL SIGNO - COMO ESTA ESCRITO SINO NO FUNCIONARA*/
+    }
+}
+
+.icono h3 {
     text-transform: uppercase;
 }
-.contenedor-anuncios{
-    display: flex;/*flexbox*/
-    justify-content: space-between;
-    flex-wrap: wrap;/*no se como explicar pero es para que flex tome solo el espacio del 
+
+@media (min-width: 800px) {
+    .contenedor-anuncios {
+        display: flex;
+        /*flexbox*/
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /*no se como explicar pero es para que flex tome solo el espacio del 
     contenedor y si se sobrepasa ponga un elemento despues del otro, esta propiedad va en el 
     padre o contenedor principal*/
+    }
 }
-.anuncio{
+
+.anuncio {
     margin-bottom: 2rem;
-    flex-shrink: 0;/*para que no se encojan los elementos*/
-    flex-basis: calc(32% - 1rem);
+    /*flex-shrink: 0;*/
+    /*para que no se encojan los elementos*/
     /*border-style: solid;
     border-color: darkgrey;
     border-width: 0.1rem;*/
@@ -163,22 +262,32 @@ h4{
     border: 1px solid darkgray;
     background-color: #F5F5F5;
 }
-.contenido-anuncio{
+
+@media (min-width: 800px) {
+    .anuncio {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.contenido-anuncio {
     /*text-align: center;*/
     /*padding-left: 2rem;
     padding-right: 2rem;*/
     padding: 0rem 2rem 3rem 2rem;
 }
-.contenido-anuncio h3{
+
+.contenido-anuncio h3 {
     /*margin-top: 1rem;*/
     font-size: 2.7rem;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;        
+    margin-bottom: 1.5rem;
 }
-.descripcion{
+
+.descripcion {
     font-size: 1.8rem;
 }
-.prize-color{
+
+.prize-color {
     font-size: 1.7rem;
     /*margin-top: 0;
     margin-bottom: 0;*/
@@ -186,11 +295,15 @@ h4{
     color: green;
     /*font-weight: 700;*/
 }
-.alinear{
-    display: flex;
-    justify-content: flex-end;  
+
+@media (min-width: 800px) {
+    .alinear {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
-.caracteristicas_iconos{
+
+.caracteristicas_iconos {
     list-style: none;
     padding: 0;
     display: flex;
@@ -198,17 +311,23 @@ h4{
     max-width: 50rem;
     flex: 1;
 }
-.caracteristicas_iconos li{
+
+.caracteristicas_iconos li {
     display: flex;
 }
-.caracteristicas_iconos li p{
+
+.caracteristicas_iconos li p {
     margin-left: 0.5rem;
     font-size: 1.5rem;
 }
+
+
 /*
 .caracteristicas_iconos li{
     display: flex; //*afectas dentro de los li
 }*/
+
+
 /*
 body::-webkit-scrollbar-track{
     background-color: black;
@@ -221,61 +340,100 @@ body::-webkit-scrollbar-thumb{
     border-radius: 5px;
     
 }*/
-.imagen-contacto{
+
+.imagen-contacto {
     background-image: url("../img/encuentra.jpg");
-    background-position: center center;/*centramos la imagen*/
+    background-position: center center;
+    /*centramos la imagen*/
     background-size: cover;
     height: 40rem;
     display: flex;
     align-items: center;
 }
-.contenido-contacto{
-    flex: 1;/*es el factor de crecimiento, detecta el tamaño disponible para asignar un tamaño dependiendo de los elementos*/
+
+.contenido-contacto {
+    /*flex: 1;*/
+    /*es el factor de crecimiento, detecta el tamaño disponible para asignar un tamaño dependiendo de los elementos*/
     /*margin-left: auto;*/
     color: white;
 }
-.contenido-contacto p{
+
+.contenido-contacto p {
     font-size: 1.8rem;
 }
+
+
 /**Sección inferior**/
-.seccion-inferior{
+
+
+/*/
+.blog article {
+    margin: 0 auto 0 auto;
+}*/
+
+@media (min-width: 800px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        /*el blog toma el 60% de la pantalla*/
+        flex-basis: 53%;
+        /*max-width: 10%;*/
+    }
+    .seccion-inferior .testimoniales {
+        /*testimoniales toma el 40% - 2rem*/
+        flex-basis: calc(40% - 1.5rem);
+    }
+    .imagen {
+        flex-basis: 38%;
+    }
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between !important;
+    }
+    .texto-entrada {
+        flex-basis: calc(65% - 4rem);
+    }
+}
+
+@media (min-width: 550px) {
+    .testimoniales {
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.entrada-blog {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.seccion-inferior .blog{/*el blog toma el 60% de la pantalla*/
-    flex-basis: 53%;
-    /*max-width: 10%;*/
-}
-.seccion-inferior .testimoniales{/*testimoniales toma el 40% - 2rem*/
-    flex-basis: calc(40% - 1.5rem);
-}
-.entrada-blog{
-    display: flex;
-    justify-content: space-between;
-}
-.imagen{
-    flex-basis: 38%;
-}
-.texto-entrada{
-    flex-basis: calc(65% - 4rem);
-}
-.texto-entrada h4{
+
+.texto-entrada h4 {
     margin: 0;
-    line-height: 1.2;/*interlineado*/
+    line-height: 1.2;
+    /*interlineado*/
 }
-.espaciado{
+
+.espaciado {
     padding-top: 2rem;
     /*margin-top: 2rem;*/
 }
-.texto-entrada p{
+
+.texto-entrada p {
     font-size: 1.3rem;
     line-height: 2rem;
 }
-.texto-entrada a{
+
+.texto-entrada a {
     color: black;
     text-decoration: none;
 }
-.texto-entrada h4::after{/*para crear un pseudo elemento depues del texto, los pseudoelementoos no se pueden seleccionar*/
+
+.texto-entrada h4::after {
+    /*para crear un pseudo elemento depues del texto, los pseudoelementoos no se pueden seleccionar*/
     content: '';
     display: block;
     width: 15rem;
@@ -283,97 +441,146 @@ body::-webkit-scrollbar-thumb{
     background-color: greenyellow;
     margin-top: 1rem;
 }
-.texto-entrada span{
+
+.texto-entrada span {
     color: goldenrod;
 }
-.testimonial{
+
+.testimonial {
     background-color: rgb(115, 187, 33);
     font-size: 2.1rem;
-    color:white;
+    color: white;
     padding: 1rem;
     line-height: 4rem;
-    border-radius: 2rem;/*50% para hacer un circulo*/ 
+    border-radius: 2rem;
+    /*50% para hacer un circulo*/
 }
-.testimonial p{
+
+.testimonial p {
     text-align: right;
 }
-.testimonial blockquote::before{
+
+.testimonial blockquote::before {
     content: '';
     background-image: url(../img/comilla.svg);
     width: 4rem;
     height: 4rem;
-    position: absolute;/*indicamos coordenadas*/
+    position: absolute;
+    /*indicamos coordenadas*/
     left: -2rem;
     top: -1rem;
 }
-.testimonial blockquote{
-    position: relative;/*indicamos coordenadas va con position absolute*/
+
+.testimonial blockquote {
+    position: relative;
+    /*indicamos coordenadas va con position absolute*/
     padding-left: 5rem;
+    margin-right: 0;
 }
+
+
 /*NOTA CUANDO JUEGAS CON POSICIONES EL ELEMENTO PADRE DEBE TENER UNA POSICION RELATIVA
 Y EL ELEMENTO HIJO TENDRA LA POSICION ABSOLUTA EN EL CASO DE ARRIBA EL ELEMENTO HIJO ES
 ::before Y EL ELEMENTO PADRE ES BLOCQUOTE*/
+
+
 /**Footer**/
-.site-footer{
+
+.site-footer {
     background-color: #333333;
     margin: 0;
 }
-.copyright{
+
+.copyright {
     margin: 0;
     color: white;
     font-size: 1.5rem;
+    text-align: center;
 }
-.contenedor-footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 2.5rem 0;/*padding arriba y abajo 2.5 e izq y derecha 0*/
+
+.contenedor-footer nav {
+    display: none;
+    /*para ocultar elementos*/
+}
+
+.contenedor-footer {
     margin-top: 2rem;
+    padding: 2.5rem 0;
 }
+
+@media (min-width: 800px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-footer nav {
+        display: unset;
+    }
+    .copyright {
+        padding: 0;
+    }
+}
+
+
 /**Internas**/
-.contenido-nosotros{
+
+.contenido-nosotros {
     display: grid;
     /*grid-template-columns: 50% 50%; es lo mismo de abajo*/
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;/*ojo con esta funcion que ya esta obsoleta v,:*/
+    column-gap: 2rem;
+    /*para dar separación a las columnas*/
 }
-.texto-nosotros{
+
+.texto-nosotros {
     /*margin-left: 2rem;*/
     font-size: 1.6rem;
     line-height: 2.8rem;
 }
-.texto-nosotros blockquote{
+
+.texto-nosotros blockquote {
     padding: 1rem 0;
     font-weight: 800;
     margin: 0;
 }
-.resumen-propiedad{
+
+.resumen-propiedad {
     display: flex;
     justify-content: space-between;
-    align-items: center;/*align-items-->alinea verticalmente, mientras que justify content--> horizontalmente*/
+    align-items: center;
+    /*align-items-->alinea verticalmente, mientras que justify content--> horizontalmente*/
 }
-.contenido-centrado p{
+
+.contenido-centrado p {
     font-size: 1.6rem;
     line-height: 3rem;
 }
+
+
 /**contacto**/
-.contacto p{
+
+.contacto p {
     margin-bottom: 0%;
 }
-label{
-    display: block;/*para que cada elemento tome el espacio disponible en ancho y alto
+
+label {
+    display: block;
+    /*para que cada elemento tome el espacio disponible en ancho y alto
     al haber mas de un elemento se posicionan debajo*/
     font-size: 1.7rem;
     padding: 1rem;
     font-weight: 600;
     text-transform: uppercase;
 }
-legend{
+
+legend {
     font-size: 2.4rem;
     color: #333333;
 }
+
 input:not([type="submit"]),
 textarea,
-select{
+select {
     padding: 1rem;
     display: block;
     width: 95%;
@@ -383,16 +590,20 @@ select{
     font-size: 1.5rem;
     font-weight: 430;
 }
-select{
+
+select {
     width: 97.5%;
 }
-textarea{
-    height:20rem;
+
+textarea {
+    height: 20rem;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     width: auto;
 }
-.forma-contacto{
+
+.forma-contacto {
     display: flex;
     align-items: center;
     justify-content: space-between;

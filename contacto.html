@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raices</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <!--es recomendable que tu hoja de estilos(tu link) la coloques como la última-->
-    <link rel="stylesheet" href="css/styles.css">    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -40,13 +40,16 @@
     <h1 class="fw-300">Contacto</h1>
     <img src="img/destacada3.jpg" alt="imagen Principal">
 
-    <main class="section contenedor2 contenido-centrado">
+    <main class="section contenedor contenido-centrado">
         <h2 class="fw-300">Llena el formulario de contacto</h2>
-        <form class="contacto" action=""><!--para crear formularios usas form-->
+        <form class="contacto" action="">
+            <!--para crear formularios usas form-->
             <fieldset>
-                <legend>Información Personal</legend> 
-                <label for="nombre">Nombre:</label><!--el for le indica a que input pertenece con respecto al id-->
-                <input type="text" id="nombre" required placeholder="Tu Nombre"><!--puedes agragar placeholder = "un texto" para que aparezca una sombre en el txtfield-->
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <!--el for le indica a que input pertenece con respecto al id-->
+                <input type="text" id="nombre" required placeholder="Tu Nombre">
+                <!--puedes agragar placeholder = "un texto" para que aparezca una sombre en el txtfield-->
                 <!--tbm puedes agregar value="texto" para agregar valores por default al txtfield-->
                 <!--y required para obligar a llenar campos-->
                 <label for="e-mail">E-mail:</label>
@@ -81,22 +84,23 @@
                 <label for="tiempo">Hora</label>
                 <input type="time" id="tiempo">
             </fieldset>
-            <input type="submit" value='Enviar'class="button boton-verde">
+            <input type="submit" value='Enviar' class="button boton-verde">
         </form>
     </main>
 
     <footer class="site-footer section">
-        <div class="contenedor2 contenedor-footer">
+        <div class="contenedor contenedor-footer">
             <nav class="navegacion">
                 <a href="nosotros.html">Nosotros</a>
                 <a href="anuncios.html">Anuncios</a>
                 <a href="blog.html">Blog</a>
                 <a href="contacto.html">Contacto</a>
-            </nav>           
+            </nav>
             <!--&copy es una entidad en html, hay muchas entidades que puedes buscar en la red-->
             <p class="copyright">Todos los Derechos Reservados 2021 &copy;</p>
         </div>
     </footer>
 
 </body>
+
 </html>
